@@ -169,9 +169,9 @@ class MathTex {
    * parsing the current text to Tex syntax if it has not been transformed
    */
   textToKatex() {
-    /*if (!this.data.text) {
-      this.data.text = 'Gleichung:';
-    }*/
+    if (!this.data.text) {
+      this.data.text = 'a^2 + b^2 = c^2';
+    }
 
     if (!this.katexNode) return;
 
