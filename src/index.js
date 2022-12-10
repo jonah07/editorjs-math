@@ -136,7 +136,7 @@ class MathTex {
     div.dataset.placeholder = this._placeholder;
     this.katexNode = document.createElement('div');
     this.katexNode.id = 'katex-node';
-    this.katexNode.contentEditable = false;†
+    this.katexNode.contentEditable = false;
     div.appendChild(this.katexNode);
 
     div.addEventListener('keyup', this.onKeyUp);
