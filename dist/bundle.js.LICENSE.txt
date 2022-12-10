@@ -1,0 +1,7 @@
+/**
+ * Math Block for the Editor.js.
+ * Render Tex syntax/plain text to pretty math equations
+ *
+ * @author flaming-cl
+ * @license The MIT License (MIT)
+ */
