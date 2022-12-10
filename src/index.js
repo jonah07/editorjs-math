@@ -115,6 +115,7 @@ class MathTex {
     }
 
     this.textNode = document.createElement('input');
+    this.textNode.placeholder = "Gleichung";
     this.textNode.contentEditable = true;
     this.textNode.value = this.data.text;
     this.textNode.hidden = true;
@@ -135,7 +136,7 @@ class MathTex {
     div.dataset.placeholder = this._placeholder;
     this.katexNode = document.createElement('div');
     this.katexNode.id = 'katex-node';
-    this.katexNode.contentEditable = false;
+    this.katexNode.contentEditable = false;†
     div.appendChild(this.katexNode);
 
     div.addEventListener('keyup', this.onKeyUp);
@@ -170,9 +171,9 @@ class MathTex {
    * parsing the current text to Tex syntax if it has not been transformed
    */
   textToKatex() {
-    if (!this.data.text) {
-      this.data.text = 'equation:';
-    }
+    /*if (!this.data.text) {
+      this.data.text = 'Gleichung:';
+    }*/
 
     if (!this.katexNode) return;
 
@@ -183,7 +184,7 @@ class MathTex {
     try {
       katex.render(this.data.text, this.katexNode, this.config);
     } catch (e) {
-      const errorMsg = 'Invalid Equation. ' + e.toString();
+      const errorMsg = 'Ungültiger Ausdruck. ' + e.toString();
       this.katexNode.innerText = errorMsg;
     }
   }
